@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DES307 Project Journal</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <h1>DES307 Project Journal</h1>
+    <div id="journal-feed" class="journal-feed"></div>
+  </main>
+
+  <!-- Marked and DOMPurify (CDN quick start) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+  <script>
+    // Single fetch, single render target
+    fetch('/api/notes')
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then(notes => {
+        const feed = document.getElementById('journal-feed');
+        notes.forEach(note => {
+          const rawHtml = marked.parse(note.content);
+          const safeHtml = DOMPurify.sanitize(rawHtml);
+          const card = document.createElement('article');
+          card.className = 'md-content card';
+          card.innerHTML = `
+            <header><small>${note.filename}</small></header>
+            <section>${safeHtml}</section>
+          `;
+          feed.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load notes:', err);
+        document.getElementById('journal-feed').textContent = 'Failed to load notes.';
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* CSS */
+
+.img-box {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f6f7f8;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover crops to fill the box */
+  display: block;
+}
+
+.md-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

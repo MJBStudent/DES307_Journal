@@ -1,5 +1,25 @@
 /* CSS */
 
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
 .img-box {
   width: 320px;
   height: 200px;

@@ -28,6 +28,8 @@ app.get('/api/notes', (req, res) => {
   });
 });
 
+//To start server run - node server.js in a terminal
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

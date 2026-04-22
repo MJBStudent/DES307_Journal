@@ -12,6 +12,8 @@
     <div id="journal-feed" class="journal-feed"></div>
   </main>
 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑ Back to Top</button>
+
   <!-- Marked and DOMPurify (CDN quick start) -->
   <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
@@ -41,6 +43,24 @@
         console.error('Failed to load notes:', err);
         document.getElementById('journal-feed').textContent = 'Failed to load notes.';
       });
+
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
 </body>
 </html>

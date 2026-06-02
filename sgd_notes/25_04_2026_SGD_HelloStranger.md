@@ -52,9 +52,9 @@ Turn off sRGB
 
 ``` Quick reason why: sRGB applies a gamma curve designed for how human eyes perceive color. When you uncheck it, the texture is read as linear data — meaning a 50% gray pixel actually equals 0.5 in math. With sRGB on, that same 50% gray reads as ~0.22 in math, which completely breaks Lerp blending. For anything used as a mask, roughness, metallic, AO, or normal map, sRGB should always be off. ```
 
-![alt text](image-2.png)
+![alt text](../images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](../images/image-3.png)
 #### colourmode for masks set to linear, sRGB off for better lerp calculations. If sRGB is enabled it can mess with the math, a 0.5 grey will be 0.5 and not downshifted to 0.22 etc
 
 ``` Sampler Type to Linear Color (this is critical — Linear Color tells the material to read the texture as data, not as sRGB-corrected colour). ```
@@ -65,7 +65,7 @@ Hit a snag trying for ORM packing the masks, in substance they don't export corr
 
 Switching to just using custom user 
 
-![alt text](image-4.png) - packing a mask to roughness and metallic works but AO simply won't 
+![alt text](../images/image-4.png) - packing a mask to roughness and metallic works but AO simply won't 
 
 Switching to user inputs on the material (user0,user1,user3) 
 
@@ -301,7 +301,7 @@ Take it one phase at a time. Phase 1 (project + user channels) is the most criti
 
 ### 11.05.2026
 
-![alt text](image-5.png)
+![alt text](../images/image-5.png)
 
 
 

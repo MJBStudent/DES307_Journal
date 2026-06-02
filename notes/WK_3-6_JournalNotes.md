@@ -1,6 +1,37 @@
-### 23.05.25
+# Week 4 
+## Entry 1
 
-![alt text](image-4.png)
+![alt text](image.png)
+
+Fleshing out the tech stack for presentation and exploring 
+
+### Face counter
+
+### measuring the crowd
+
+A core part of anxiety in non-places is sensory: the visual noise of brands and products, the beeps of registers, trolleys clanging. Those are external. But anxiety also has an internal dimension — the lone struggle, the work of keeping up appearances — that's harder to externalise.
+The ideal version of the project currently called 'Hello Stranger' makes both visible at once. Each person in the CAVE2 spawns a proximity sphere — a small bubble of "okay" projected onto the environment around them. Inside their bubble, the world is calmer. Outside it, in the periphery, the corruption builds. This mirrors the actual experience: when you're anxious, you tunnel-vision. Your immediate field shrinks to a manageable bubble while the edges of perception fill with movement and threat.
+
+
+Each person's movement controls the size and integrity of their own bubble. More people in the space pushes up the global SocialLoad — anxiety grows faster — but each person can only manage their own bubble. The pressure is shared, the agency isn't. Visitors feel the room get worse without knowing why. They might assume it's about them.
+At full overload, the bubble itself starts failing — the edges close in, until the periphery dancing is all there is. The light snuffs out. There is no calm space left, only the management of how fast it collapses.
+It feels like you're suffocating.
+
+### (equirectangular) ###
+Projecting at this aspect ratio could be difficult. 9:1 doesn't capture a 320 panaromic like I had hoped.
+
+16:9 might work better here even if its not 'correct' ratio
+
+
+HighResShot 8000x500
+Very valuable command from unreal!
+
+
+# Week 5 - Media pipe
+## Entry 1 
+
+![alt text](../images/image-12.png)
+
 
 The second test in Cave2 was purely to test if the cave computer could run a packaged build of the project as converting it to 5.5 was suprisingly hard given a shift to post process effects pivot.
 
@@ -15,30 +46,31 @@ Much of this is to say my audience is anyone who can emphathise and perhaps conn
 
 This can create a thread of connection and community about unseen struggles but how commonalities in visual discomfort are shared, even just the cool engineering of these types of projects but also  for me is purely awareness. Awareness and exploring the mechanisms of Anxiety maybe even admitting it as an issue for myself is selfish, however I don't know how to design something that doesn't hav
 
-Designing for the Cave2 is for me a once in a lifetime chance as well.
+![alt text](../images/image-13.png)
 
+Having the stack working brought me back to the visuals faster than I was anticipating. Currently it isn't o not Overwhelming, or creating visual strain. I liked the fragment shader but as electric stressors, However it wasn't really an interaction if there is a barely perceptable interaction, I doubt it would be discovered organically.
 
-
-Having the stack working brought me back to the visuals faster than I was anticipating.  The material moving and fragmenting with the Ikeda eyes was always frankly temporary and definitely not Overwhelming, or creating visual strain. I liked the fragment shader but as electric stressors of rain drops pulsing out competing for attention until you can't. However it wasn't really an interaction if there is a barely perceptable interaction, I doubt it would be discovered organically.
+![alt text](../images/image-14.png)
 
 I wanted to ground the visual language and simplify it, Bridget (contrast artist) has some stunning examples which really confirmed to me the idea of zebra striping as the effect - e.g the scene becomes discombobulating
 
-![alt text](image-5.png)
+![alt text](/images/image-5.png)
 
 So this works, and is interesting how migrane inducing this effect could be but I need to clarify my messaging and not throw too many ideas into the installation, being simple should be a core tenant.
 
 Zebra striping was easy enough to setup with Ai giving a formula and suggesting the use of postprocess, this does make sense as pershader would be exensive, but since the poles are created and the banding generated it should extend beyond the actual material (what the shop is made of) to something a bit more inexplicable there but not there in the world invading a persons perception of the world as an emotional state, not a literal this is what I 'see' but this is what I feel.
 
-![alt text](image-6.png)
+![alt text](/images/image-6.png)
 
 Creating this in Unreal took some time however solved an interesting problem that had been creeping up, where the environment is that zebra striping discomfort comes from movment. I really do not want to have a looping camera as that turns it into more of a theme park ride, where I want an exploration of a synthetic space.
+
+![alt text](../images/image-15.png)
 
 When testing this on a TV (22nd I was unable to test at Cave2) stillness wasn't uncomfortable but the poles moving are, concentric bands of influence really fit with more organic human energy, these spheres of influence or bands could crunch or tighten with frequency and intensity based on the amount of faces detected in a scene.
 This has a comfortable nod to the pressures of people witnessing you in this environment adds pressure, but is a spiral of often 'imagined' things in the periphy a freeze response.
 
-Bloom intesity is a double edged sword, glare in these environments is precisely what is uncomfortable, though I have to be honest it washing out the black and white defeats the intended pattern glare strain.
 
-![alt text](image-4.png)
+![alt text](/images/image-4.png)
  
 Idrew the scene at maximum overload to see what was happening visually, and noticed the calm zone in the centre I'd painted instinctively — the design rearranged around that observation
 
@@ -50,10 +82,9 @@ Creating a drawover was interesting as it showed the core of the interaction rea
 
 This sketch has a lot going on, but the top opressive dark roof, start whites of halftone lights on the environment and perifery does reveal parts of the Ikeda eyes fragmenting below - the beeps, fluroscent builbs, pressure to get in, perform get out. The box pulses aren't bad entities watching, they just are beeps and boxes, but the pastel world we hold onto is a kind of banal respite but being clear that movement is the answer as simple as that is, the more the stress the more you have to fight it but it is managable.
 
-### 23.05.26
+## Entry 2
 
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](/images/image-3.png)
 
 Really taking the time to learn some of the math and theory behind a desired effect has been really insightful, but I find I really have to write it down documenting in a journal for it to really stick.
 
@@ -64,3 +95,16 @@ Pastl substrate material has been created but not finalised however the space it
 
 In conclusion focusing on a 'safe' zone with better feedback and clearer visual language is the best call here going forward.
 
+![alt text](../images/image-5.png)
+
+![alt text](../images/image-6.png)
+
+# Week 6
+## Entry 1
+The "Primal Alarm" name was bad and I knew it. Sounds like a fragrance. Workshopped a bunch of supermarket-coded alternatives — "Aisle 0", "Shrink", "Special Offer", "Do Not Freeze". Landed (for now) on **Hello Stranger**. A supermarket that addresses you as a stranger rather than a customer — captures the anxiety of public space in one phrase. Slightly wrong, slightly welcoming.
+
+The non-place framing (Augé) is doing real work in this project. The supermarket isn't just a backdrop — it's an environment specifically designed to suppress identity and route bodies efficiently. That's the perfect arena for a piece about social anxiety and the freeze response.
+
+Also reframed something important: this isn't an escape room. **It's a portrait.** The point isn't "solve the puzzle by moving" — it's "here is what anxiety feels like to inhabit." The piece doesn't need a clean resolution mechanic. It needs to be accurate.
+
+That reframe solves the explicit-instruction problem too. I don't need to teach the visitor how to escape. I just need to put them inside the experience long enough that they feel the weight of managing it.

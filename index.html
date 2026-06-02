@@ -30,13 +30,18 @@
         notes.forEach(note => {
           const rawHtml = marked.parse(note.content);
           const safeHtml = DOMPurify.sanitize(rawHtml);
-          const card = document.createElement('article');
-          card.className = 'md-content card';
-          card.innerHTML = `
-            <header><small>${note.filename}</small></header>
-            <section>${safeHtml}</section>
+          const details = document.createElement('details');
+          details.className = 'note-card';
+          details.innerHTML = `
+            <summary>
+              <span>${note.filename}</span>
+              <span class="toggle-hint"></span>
+            </summary>
+            <div class="note-body md-content">
+              ${safeHtml}
+            </div>
           `;
-          feed.appendChild(card);
+          feed.appendChild(details);
         });
       })
       .catch(err => {
